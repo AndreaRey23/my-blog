@@ -21,6 +21,7 @@ const withDB = async (operations, res) => {
 }
 
 app.get('/api/articles/:name', async (req, res) => {
+    console.log("hola");
     withDB(async (db) => {
         const articleName = req.params.name;
 
@@ -31,6 +32,7 @@ app.get('/api/articles/:name', async (req, res) => {
 
 app.use(bodyParser.json());
 app.post('/api/articles/:name/upvote', async (req, res) => {
+    console.log("hola");
     withDB(async (db) => {
         const articleName = req.params.name;
     
@@ -47,6 +49,7 @@ app.post('/api/articles/:name/upvote', async (req, res) => {
 });
 
 app.post('/api/articles/:name/add-comment', (req, res) => {
+    console.log("hola");
     const { username, text } = req.body;
     const articleName = req.params.name;
 
