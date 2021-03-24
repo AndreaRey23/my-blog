@@ -66,4 +66,10 @@ app.post('/api/articles/:name/add-comment', (req, res) => {
 app.get('*', (req,res) => {
     res.sendFile(path.join(__dirname + '/build/index.html'));
 })
-app.listen(80, () => console.log('Listening on port 8000'));
+
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, err => {
+    if(err) throw err;
+    console.log("%c Server running", "color: green");
+});
+//app.listen(80, () => console.log('Listening on port 8000'));
