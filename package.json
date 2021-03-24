@@ -12,11 +12,13 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "heroku": "^7.51.0",
     "mongodb": "^3.6.5"
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/node": "^7.13.12",
-    "@babel/preset-env": "^7.13.12"
+    "@babel/preset-env": "^7.13.12",
+    "babel-node": "0.0.1-security"
   }
 }
